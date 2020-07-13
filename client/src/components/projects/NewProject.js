@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import Sidebar from '../layout/Sidebar';
+//import Sidebar from '../layout/Sidebar';
 
 const NewProject = () => {
 

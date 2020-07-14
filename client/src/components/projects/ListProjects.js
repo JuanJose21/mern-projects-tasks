@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Project from './Project';
+import projectContext from '../../context/projects/projectContext';
 
 const ListProjects = () => {
-    const projects = [
-        {
-            name: 'Virtual store'
-        },
-        {
-            name: 'Intranet'
-        },
-        {
-            name: 'Responsive site'
-        }
-    ];
+
+    const projectsContext = useContext(projectContext);
+    const { projects, getProjects } = projectsContext;
+
+    useEffect(() => {
+        getProjects();
+    }, []);
+
+    if (projects.length === 0) return null;
 
     return (
         <ul className="listado-proyectos">

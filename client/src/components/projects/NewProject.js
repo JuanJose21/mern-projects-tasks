@@ -1,11 +1,11 @@
 import React, { Fragment, useState, useContext } from 'react';
-import projectContext from '../../context/projects/projectContext'
+import projectContext from '../../context/projects/projectContext';
 
 const NewProject = () => {
 
     // get state form
     const projectsContext = useContext(projectContext);
-    const { form } = projectsContext;
+    const { form, viewForm } = projectsContext;
 
     // state project
     const [project, saveProject] = useState({
@@ -30,6 +30,7 @@ const NewProject = () => {
             <button
                 type="button"
                 className="btn btn-block btn-primario"
+                onClick={() => viewForm()}
             >
                 New Project
             </button>

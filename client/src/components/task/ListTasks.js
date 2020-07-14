@@ -32,9 +32,15 @@ const ListTask = () => {
                         : tasksProject.map(task => (
                             <Task task={task} />
                         ))
-
                 }
             </ul>
+
+            <button
+                type="button"
+                className="btn btn-eliminar"
+            >
+                Delete project &times;
+            </button>
         </Fragment>
     );
 }
